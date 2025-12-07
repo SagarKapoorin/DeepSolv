@@ -1,4 +1,6 @@
 # Pokedex Lite
+- Live Link : https://pokedex37.netlify.app
+- Working video: https://drive.google.com/file/d/1CVAzoo3fu_BNJ_Rmat5VfouyXxc5iYPP/view?usp=sharing
 
 Production-ready Pokédex built with React + Vite + TypeScript, using Tailwind for styling, React Query for data orchestration, Supabase Auth for OAuth, and Zustand for local favorites.
 Run prettier it would easier to read code then.
