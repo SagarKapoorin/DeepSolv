@@ -19,26 +19,26 @@ export const FiltersBar = ({
   showFavorites,
   onToggleFavorites,
 }: FiltersBarProps) => {
-  //console.log('FiltersBar', { searchTerm, selectedType, showFavorites });
+    //console.log('FiltersBar', { searchTerm, selectedType, showFavorites });
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-white/70 p-4 shadow-sm ring-1 ring-slate-100 md:flex-row md:items-center md:justify-between">
-      <div className="flex flex-1 flex-col gap-3 md:flex-row md:items-center md:gap-4">
-        <div className="relative w-full md:max-w-sm">
+    <div className="flex flex-col gap-3 rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl backdrop-blur md:flex-row md:items-center md:justify-between md:p-5">
+      <div className="flex flex-1 flex-col gap-3 md:flex-row md:items-center md:gap-5">
+        <div className="relative w-full md:max-w-md">
           <Search className="pointer-events-none absolute left-3 top-3.5 h-5 w-5 text-slate-400" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search Pokémon..."
-            className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-3 text-sm text-slate-800 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
+            placeholder="Search Pokemon..."
+            className="w-full rounded-xl border border-white/10 bg-slate-900/60 py-3 pl-10 pr-3 text-sm text-slate-100 shadow-sm outline-none transition placeholder:text-slate-500 focus:border-indigo-300/70 focus:ring-2 focus:ring-indigo-200/30"
           />
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-sm font-medium text-slate-600">Type</label>
+          <label className="text-sm font-medium text-slate-200">Type</label>
           <select
             value={selectedType ?? ''}
             onChange={(e) => onSelectType(e.target.value ? e.target.value : null)}
-            className="min-w-[150px] rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-800 shadow-sm outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
+            className="min-w-[150px] rounded-xl border border-white/15 bg-slate-900/60 px-3 py-3 text-sm text-slate-100 shadow-sm outline-none focus:border-indigo-300/70 focus:ring-2 focus:ring-indigo-200/30"
           >
             <option value="">All types</option>
             {types.map((type) => (
@@ -51,10 +51,10 @@ export const FiltersBar = ({
       </div>
       <button
         onClick={onToggleFavorites}
-        className={`flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+        className={`flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/60 ${
           showFavorites
-            ? 'bg-red-100 text-red-600 ring-1 ring-red-200'
-            : 'bg-slate-900 text-white shadow'
+            ? 'border border-red-300/30 bg-red-500/10 text-red-100 shadow-lg'
+            : 'border border-indigo-300/30 bg-gradient-to-r from-indigo-500/80 to-indigo-400/90 text-white shadow-lg shadow-indigo-500/25'
         }`}
       >
         <Heart
