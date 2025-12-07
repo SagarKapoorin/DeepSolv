@@ -47,3 +47,23 @@ button {
   border-radius: 999px;
   border: 2px solid #0b1224;
 }
+
+.type-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #0b1224;
+}
+
+.type-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.type-scroll::-webkit-scrollbar-track {
+  background: #0b1224;
+  border-radius: 999px;
+}
+
+.type-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #818cf8, #c084fc);
+  border-radius: 999px;
+  border: 2px solid #0b1224;
+}
